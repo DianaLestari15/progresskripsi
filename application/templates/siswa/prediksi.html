@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediksi Gaya Belajar</title>
+</head>
+<body>
+    
+    {% if prediction[0] == 0 %}
+    <div class="row justify-content-md-center mb-4">
+        <h3 class='text-primary'>Hasil Prediksi Gaya Belajar VISUAL</h3>
+    </div>
+    <div class="row justify-content-md-center">
+        <div class="thumbnail">
+            <pre>Saran mengenai gaya belajar secara visual yakni melalau beberapa cara seperti pengenalan menggunakan beragam
+                 bentuk gambar untuk menyampaikan sebuah informasi, menjelaskan secara terperinci, 
+                 belajar dengan mengingatkan pada sebuah lagu agar mudah dipahami.</pre>
+                <img src="{{url_for('static', filename='images/iris_setosa.jpg')}}" class="img-thumbnail" />
+        </div>
+    </div>
+    {% endif %}
+    {% if prediction[0] == 1 %}
+    <div class="row justify-content-md-center mb-4">
+        <h3 class='text-primary'>Hasil Prediksi Gaya Belajar AUDITORIAL</h3>
+    </div>
+    <div class="row justify-content-md-center">
+        <div class="thumbnail">
+            <pre>Saran mengenai gaya belajar secara auditorial belajar dengan menjelaskan materi 
+                secara lisan karena belajar auditorial lebih menekanan informasi lewat pendengaran, 
+                mereview secara verbal tentang apa yang dipelajari, dan  melakukan diskusi.</pre>
+                <img src="{{url_for('static', filename='images/iris_versicolor.jpg')}}" class="img-thumbnail" />
+        </div>
+    </div>
+    {% endif %}
+    {% if prediction[0] == 2 %}
+    <div class="row justify-content-md-center mb-4">
+        <h3 class='text-primary'>Hasil Prediksi Gaya Belajar MEMBACA DAN MENULIS</h3>
+    </div>
+    <div class="row justify-content-md-center">
+        <div class="thumbnail">
+            <pre>Saran mengenai gaya belajar membaca dan menulis adalah dengan menulis informasi atau 
+                 pelajaran secara point-point yang penting agar mudah diserap informasi, 
+                 meringkas pelajaran yang dipelajari, membaca berbagai sumber informasi.</pre>
+                <img src="{{url_for('static', filename='images/iris_virginica.jpg')}}" class="img-thumbnail" />
+        </div>
+    </div>
+    {% endif %}
+    {% if prediction[0] == 3 %}
+    <div class="row justify-content-md-center mb-4">
+        <h3 class='text-primary'>Hasil Prediksi Gaya Belajar KINESTETIK</h3>
+    </div>
+    <div class="row justify-content-md-center">
+        <div class="thumbnail">
+            <pre>Saran mengenai gaya belajar kinestetik dengan melakukan pembelajaran dengan 
+                mempraktekan apa yang dipelajari, membuat sebuah alat peraga untuk menarik perhatian,melakukan keterampilan, 
+                dan menggunakan gerakan untuk menyampaiakn mata pelajaran seperti gerakan tangan.</pre>
+                <img src="{{url_for('static', filename='images/iris_virginica.jpg')}}" class="img-thumbnail" />
+        </div>
+    </div>
+    {% endif %}   
+</body>
+</html>

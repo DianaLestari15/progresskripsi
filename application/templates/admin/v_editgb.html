@@ -1,0 +1,58 @@
+{% include 'admin/header.html' %}
+
+ <!-- Begin Page Content -->
+        <div class="container-fluid">
+
+          <!-- Page Heading -->
+          <h1 class="h3 mb-4 text-gray-800">EDIT GAYA BELAJAR</h1>
+
+          <div class="row">
+
+            <div class="col-lg-6">
+              <!-- Circle Buttons -->
+              <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                  <h6 class="m-0 font-weight-bold text-primary" value="">Gaya Belajar </h6>
+                </div>
+                <div class="card-body">
+               
+                  {% for row in editgayabelajar %}
+                    <form class="form-horizontal" action="/admin/editgayabelajar/{{row.0}}" method="post" enctype="multipart/form-data">
+                      <div class="form-group" style="outline-color: none">
+                          <label class="col-lg-5 control-label">Gaya Belajar</label>
+                            <div class="col-lg-5">
+                                  <input type="hidden" name="id_gayabelajar" value="">
+                            <input type="text" name="gaya_belajar" readonly value="{{row.1}}">
+                            </div>
+                      </div>
+                      <div class="form-group">
+                          <label class="col-lg-5 control-label">Saran Belajar</label>
+                            <div class="col-lg-5">
+                              <!-- <input type="text" style="width: 400px; height: 500px;" name="saran_belajar" value="<?php echo $u->saran_belajar ?>"> -->
+                              <textarea rows="4" cols="50"  name="saran_belajar" >{{row.2}}</textarea>
+                            </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="col-lg-2 control-label"></label>
+                          <div class="col-lg-5">
+                              <button class="btn btn-primary"><i class="glyphicon glyphicon-hdd"></i> Update</button>
+                              <a href="/admin/tampil_gb" class="btn btn-default">Kembali</a>
+                            </div>
+                      </div>
+                              
+      
+ 
+  
+  </form>
+  {% endfor %}
+                </div>
+              </div>
+
+          </div>
+
+        </div>
+        <!-- /.container-fluid -->
+
+      </div>
+      <!-- End of Main Content -->
+      {% include 'admin/footer.html' %}
